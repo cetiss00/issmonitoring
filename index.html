@@ -2569,6 +2569,28 @@ window.addEventListener('DOMContentLoaded', ()=>{
 setInterval(()=>{ checkThreeDayAlerts(); updateUrgentAlerts(); },30000);
 window.addEventListener('beforeunload',()=>{ autoSave(); });
 document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='hidden') autoSave(); });
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        // 2. I-paste dito yung kinopya mo mula sa Firebase Console kanina
+        const firebaseConfig = {
+            apiKey: "AIza...",
+            authDomain: "iss-cable-monitoring.firebaseapp.com",
+            databaseURL: "https://iss-cable-monitoring-default-rtdb.firebaseio.com",
+            projectId: "iss-cable-monitoring",
+            storageBucket: "iss-cable-monitoring.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abc123"
+        };
+
+        // 3. I-initialize ang Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // 4. Gumawa ng shortcut variable para sa database natin
+        const database = firebase.database();
+        
+        console.log("Firebase is ready!");
 </script>
 </body>
 </html>
